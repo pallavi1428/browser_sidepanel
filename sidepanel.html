@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Voitekk Mini Browser</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="utilitybar">
+    <button id="settings" title="Configure website URLs" aria-label="Configure website URLs">⚙</button>
+  </div>
+
+  <main id="panels">
+    <section class="site" data-site="farzi">
+      <div class="sitebar">
+        <div class="actions">
+          <button data-action="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+          <span class="zoom-level" aria-live="polite">55%</span>
+          <button data-action="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+          <button data-action="fit" title="Fit mini view" aria-label="Fit mini view">Fit</button>
+          <button data-action="reload" title="Reload site" aria-label="Reload site">↻</button>
+          <button data-action="open" title="Open site in a tab" aria-label="Open site in a tab">↗</button>
+          <button data-action="expand" title="Expand this mini-window" aria-label="Expand this mini-window">↕</button>
+        </div>
+      </div>
+      <div class="framewrap"><div class="empty">Set a website URL in Settings.</div><iframe title="Farzi website" data-frame="farzi" allow="clipboard-read; clipboard-write; fullscreen"></iframe></div>
+    </section>
+
+    <section class="site" data-site="uniware">
+      <div class="sitebar">
+        <div class="actions">
+          <button data-action="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+          <span class="zoom-level" aria-live="polite">55%</span>
+          <button data-action="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+          <button data-action="fit" title="Fit mini view" aria-label="Fit mini view">Fit</button>
+          <button data-action="reload" title="Reload site" aria-label="Reload site">↻</button>
+          <button data-action="open" title="Open site in a tab" aria-label="Open site in a tab">↗</button>
+          <button data-action="expand" title="Expand this mini-window" aria-label="Expand this mini-window">↕</button>
+        </div>
+      </div>
+      <div class="framewrap"><div class="empty">Set a website URL in Settings.</div><iframe title="Uniware website" data-frame="uniware" allow="clipboard-read; clipboard-write; fullscreen"></iframe></div>
+    </section>
+
+    <section class="site" data-site="shiprocket">
+      <div class="sitebar">
+        <div class="actions">
+          <button data-action="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+          <span class="zoom-level" aria-live="polite">55%</span>
+          <button data-action="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+          <button data-action="fit" title="Fit mini view" aria-label="Fit mini view">Fit</button>
+          <button data-action="reload" title="Reload site" aria-label="Reload site">↻</button>
+          <button data-action="open" title="Open site in a tab" aria-label="Open site in a tab">↗</button>
+          <button data-action="expand" title="Expand this mini-window" aria-label="Expand this mini-window">↕</button>
+        </div>
+      </div>
+      <div class="framewrap"><div class="empty">Set a website URL in Settings.</div><iframe title="Shiprocket website" data-frame="shiprocket" allow="clipboard-read; clipboard-write; fullscreen"></iframe></div>
+    </section>
+  </main>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mini Browser Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>Website settings</h1>
+    <p>Paste the full URL you normally use for each service, including your company's internal Farzi address if applicable.</p>
+    <form id="settingsForm">
+      <label for="farziUrl">Farzi URL</label>
+      <input id="farziUrl" type="url" placeholder="https://your-farzi-site.example/" autocomplete="url">
+      <label for="uniwareUrl">Uniware URL</label>
+      <input id="uniwareUrl" type="url" placeholder="https://your-uniware-site.example/" autocomplete="url">
+      <label for="shiprocketUrl">Shiprocket URL</label>
+      <input id="shiprocketUrl" type="url" placeholder="https://app.shiprocket.in/" autocomplete="url">
+      <label class="compat"><input id="compatMode" type="checkbox"> Try compatibility mode for sites that block embedding</label>
+      <p class="security-note">When enabled, the extension removes X-Frame-Options and Content-Security-Policy response headers only for the configured site hosts when they are loaded as frames. This weakens those sites' browser security protections in the embedded view. Enable only for sites you trust. It cannot bypass every restriction or guarantee login/cookies will work.</p>
+      <button type="submit">Save settings</button>
+      <span id="status" role="status"></span>
+    </form>
+    <section class="warning">
+      <strong>Still not loading?</strong>
+      <p>Some sites detect embedding or rely on cookies and browser features that don't work in a side-panel frame. Use the ↗ button to open that site in a normal tab. The extension can't force every website to behave like a full browser tab.</p>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

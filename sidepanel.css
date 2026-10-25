@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body { margin: 0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; background: Canvas; color: CanvasText; font-size: 13px; }
+button { font: inherit; cursor: pointer; color: inherit; background: transparent; border: 1px solid color-mix(in srgb, CanvasText 22%, transparent); border-radius: 5px; padding: 2px 5px; }
+button:hover { background: color-mix(in srgb, CanvasText 8%, transparent); }
+.utilitybar { height: 27px; min-height: 27px; display:flex; justify-content:flex-end; align-items:center; padding: 1px 5px; border-bottom:1px solid color-mix(in srgb, CanvasText 14%, transparent); }
+#settings { width:24px; height:23px; padding:0; font-size:15px; line-height:1; }
+main { flex:1; min-height:0; overflow:auto; padding:3px; display:flex; flex-direction:column; gap:3px; }
+.site { min-height:100px; height:33.333%; flex:1 0 100px; border:1px solid color-mix(in srgb, CanvasText 18%, transparent); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; background:Canvas; }
+.site.expanded { height:72vh; flex:0 0 72vh; }
+.sitebar { display:flex; align-items:center; justify-content:flex-end; gap:2px; padding:2px 3px; border-bottom:1px solid color-mix(in srgb, CanvasText 13%, transparent); background: color-mix(in srgb, CanvasText 4%, Canvas); }
+.actions { display:flex; align-items:center; justify-content:flex-end; gap:2px; width:100%; }
+.actions button { padding:0 4px; font-size:12px; line-height:1.45; min-width:20px; height:21px; }
+.actions button[data-action="fit"] { font-size:10px; padding:0 4px; min-width:24px; }
+.zoom-level { min-width:28px; text-align:center; font-size:10px; color:GrayText; font-variant-numeric:tabular-nums; }
+.framewrap { flex:1; min-height:0; overflow:hidden; position:relative; background:white; color:#222; }
+.framewrap iframe { position:absolute; inset:0 auto auto 0; width:calc(100% * var(--inverse-scale, 1)); height:calc(100% * var(--inverse-scale, 1)); transform:scale(var(--page-scale, 1)); transform-origin:top left; border:0; display:block; background:white; }
+.empty { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:12px; color:#555; font-size:11px; pointer-events:none; }
+.site.loaded .empty { display:none; }
